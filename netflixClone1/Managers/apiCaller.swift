@@ -51,7 +51,9 @@ class APICaller {
                 print(results)
             }
             catch{
-                completion(.failure(APIError.failedTogetData))            }
+                completion(.failure(APIError.failedTogetData))
+                
+            }
         }
         task.resume()
     }
@@ -67,7 +69,8 @@ class APICaller {
                 print(results)
             }
             catch{
-                print(error.localizedDescription)
+                completion(.failure(APIError.failedTogetData))
+                
             }
         }
         task.resume()
@@ -84,7 +87,9 @@ class APICaller {
                 print(results)
             }
             catch{
-                completion(.failure(APIError.failedTogetData))            }
+                completion(.failure(APIError.failedTogetData))
+                
+            }
         }
         task.resume()
     }
@@ -100,7 +105,9 @@ class APICaller {
                 print(results)
             }
             catch{
-                completion(.failure(APIError.failedTogetData))            }
+                completion(.failure(APIError.failedTogetData))
+                
+            }
         }
         task.resume()
     }
