@@ -68,9 +68,7 @@ class HomeViewController: UIViewController {
         APICaller.shared.getTopRated { results in
                //
             }
-        APICaller.shared.getPopular { results in
-               //
-            }
+        
         
         
         
