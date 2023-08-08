@@ -33,7 +33,6 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: 200, height: 650))
         homeFeedTable.tableHeaderView = headerView
         
-       
         
      
     }
@@ -163,4 +162,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
         }
     }
+
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func CollectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        let vc = TitlePreviewViewController()
+        vc.configure(with: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
 
